@@ -19,11 +19,11 @@ app.post('/login', async (req, res) => {
   const { name, password } = req.body;
 
   try {
-    let user = await User.findOne({ name });
+    let user = await User.findOne({ email });
 
     if (user) {
 
-      user = new User({ name, password });
+      user = new User({ name, email,password });
       await user.save();
 
       res.status(201).json({ message: 'User logged in successfully' });

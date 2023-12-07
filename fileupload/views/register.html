@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form action="/insert" method="POST" enctype="multipart/form-data">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="file">Profile Image:</label>
+        <input type="file" name="file" id="file" accept=".jpg" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
